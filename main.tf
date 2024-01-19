@@ -96,26 +96,6 @@ resource "equinix_metal_vrf" "vrf_dallas_1" {
 #  }
 #}
 
-#resource "equinix_ecx_l2_connection" "vrf_to_ne_pri" {
-#  name                = "tf-dl-da-vrf-1_to_NE-Pri"
-#  device_uuid         = var.network_edge_device_pri
-#  device_interface_id = 5
-#  speed               = 100
-#  speed_unit          = "MB"
-#  notifications       = ["dluke@equinix.com"]
-#  zside_service_token = equinix_metal_connection.da_vrf_vc1.service_tokens[0].id
-#}
-#
-#resource "equinix_ecx_l2_connection" "vrf_to_ne_sec" {
-#  name                = "tf-dl-da-vrf-1_to_NE-Sec"
-#  device_uuid         = var.network_edge_device_sec
-#  device_interface_id = 5
-#  speed               = 100
-#  speed_unit          = "MB"
-#  notifications       = ["dluke@equinix.com"]
-#  zside_service_token = equinix_metal_connection.da_vrf_vc1.service_tokens[1].id
-#  }
-
 ## create VCs with details for VRF uplink
 #resource "equinix_metal_virtual_circuit" "da_vrf_vc_pri" {
 #  connection_id        = equinix_metal_connection.da_vrf_vc1.id
